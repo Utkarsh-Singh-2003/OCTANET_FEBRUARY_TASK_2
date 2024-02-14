@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>My To-Do List</title>
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <div id="task-form">
+          <input type="text" id="task-name" placeholder="Task Name" required>
+          <div class="task-details">
+            <input type="date" id="task-deadline" required>
+            <input type="time" id="task-time" required>
+          </div>
+          <div class="priority-container">
+          <input type="text" id="priority-textbox" placeholder="Priority">
+          <div class="slider-container">
+              <input type="range" id="task-priority" min="1" max="10" value="5" list="priority-markers">
+              <datalist id="priority-markers">
+                  <option value="1">1</option>
+                  <option value="5">5</option>
+                  <option value="10">10</option>
+              </datalist>
+          </div>
+      </div>
+      
+      
+        <input type="text" id="task-labels" placeholder="Labels (comma separated)">
+        <button class="button" onclick="addTask()">Add Task</button>
+        </div>
+        <ul class="task-list" id="task-list"></ul>
+      </div>
+      
+    <script src="script.js"></script>
+</body>
+</html>
